@@ -1,0 +1,7 @@
+def array_sum(list):
+  return sum(list)
+
+given_list=list(map(int,input().split()))
+result=array_sum(given_list)
+
+print("The sum of the elements in the list is" +str(result))
