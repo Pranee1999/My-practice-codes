@@ -1,0 +1,8 @@
+
+def rev_string(string):
+  return string[::-1]
+
+given_string=input()
+result=rev_string(given_string)
+
+result=print("The reversed string is " + result)
