@@ -1,0 +1,10 @@
+def array_multiply(lst):
+  sum=1
+  for item in lst:
+    sum*=item
+  return sum
+
+given_list=list(map(int,input().split()))
+result=array_multiply(given_list)
+
+print(result)
