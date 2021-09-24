@@ -1,0 +1,11 @@
+def main():
+    set_arr=set(arr)
+    total=list(set_arr)
+    total.sort()
+    print(total[-2])
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    main()
