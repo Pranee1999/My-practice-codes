@@ -1,0 +1,6 @@
+marks=[]
+for i in range(int(input())):
+    marks.append([input(),float(input())])
+plain_list=set([ind_marks for name,ind_marks in marks])
+second_highest=sorted(list(plain_list))[1]
+print("\n".join([a for a,b in sorted(marks) if b==second_highest]))
