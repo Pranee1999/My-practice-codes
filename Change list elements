@@ -1,0 +1,11 @@
+Number_of_commands =int(input())
+final_list=[]
+for _ in range(Number_of_commands):
+    string1= input().split()
+    command_to_follow=string1[0]
+    args=string1[1:]
+    if command_to_follow != "print":
+        command_to_follow += "("+ "," .join(args)+")"
+        eval("final_list."+command_to_follow)
+    else:
+        print(final_list) 
