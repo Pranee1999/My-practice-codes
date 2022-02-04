@@ -1,0 +1,14 @@
+class Solution:
+    def largeGroupPositions(self, s: str) -> List[List[int]]:
+        length_of_string = len(s)
+        incrementer=0
+        Final_list=[]
+        while incrementer<length_of_string:
+            counter=1
+            while incrementer<length_of_string-1 and s[incrementer]==s[incrementer+1]:
+                counter+=1
+                incrementer+=1
+            incrementer+=1
+            if counter >=3:
+                Final_list.append([incrementer-counter,incrementer-1])
+        return Final_list
