@@ -1,0 +1,10 @@
+class Solution:
+    def destCity(self, paths: List[List[str]]) -> str:
+        sample_list=[]
+        for i in range(len(paths)):
+            sample_list.append(paths[i][0])
+            sample_list.append(paths[i][1])
+        for _ in sample_list:
+          if sample_list.count(_) == 1:
+            if (sample_list.index(_)+1)%2==0:
+                return _
