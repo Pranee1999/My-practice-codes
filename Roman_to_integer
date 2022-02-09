@@ -1,0 +1,36 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        main_dict={
+            "I":1,
+            "V":5,
+            "X":10,
+            "L":50,
+            "C":100,
+            "D":500,
+            "M":1000,
+            
+            "Z":4,
+            "Y":9,
+            "Q":40,
+            "W":90,
+            "P":400,
+            "U":900
+        }
+        
+        replacement_dict={
+            "IV":"Z",
+            "IX":"Y",
+            "XL":"Q",
+            "XC":"W",
+            "CD":"P",
+            "CM":"U"
+        }
+        
+        for pair in replacement_dict:
+            s=s.replace(pair,replacement_dict[pair])
+        
+        final_sum=0
+        for roman_character in s:
+            final_sum += main_dict[roman_character]
+            
+        return final_sum
