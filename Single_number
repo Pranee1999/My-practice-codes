@@ -1,0 +1,6 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        for i in nums:
+            number_of_occurance= nums.count(i)
+            if number_of_occurance==1:
+                return i
