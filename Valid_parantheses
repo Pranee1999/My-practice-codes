@@ -1,0 +1,17 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+    
+        stack=[]
+        parantheses_pairs={")":"(","]":"[","}":"{"}
+    
+        for parantheses in s:
+            if parantheses in parantheses_pairs:
+                if stack and stack[-1]==parantheses_pairs[parantheses]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(parantheses)
+    
+        return True if not stack else False
+        
