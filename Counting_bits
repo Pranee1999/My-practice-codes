@@ -1,0 +1,9 @@
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        final_output=[]
+        for i in range (n+1):
+            binary_equivalent=bin(i).replace("0b","")
+            list_binary=list(binary_equivalent)
+            count_of_1s=list_binary.count("1")
+            final_output.append(count_of_1s)
+        return final_output
